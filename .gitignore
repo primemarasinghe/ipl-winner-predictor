@@ -4,4 +4,4 @@ __pycache__/
 data/*.csv
 charts/
 model/
-
+evaluation_report.png

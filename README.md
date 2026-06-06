@@ -13,6 +13,7 @@ Starter project scaffold for an IPL match winner prediction app.
 - `train_model.py` — model training script
 - `importdata.py` — Kaggle dataset download helper
 - `check.py` — quick dataset inspection script
+- `evaluate.py` — model evaluation and artifact export script
 
 ## Notes
 
