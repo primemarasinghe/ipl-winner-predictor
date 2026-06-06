@@ -9,4 +9,12 @@ Starter project scaffold for an IPL match winner prediction app.
 - `app.py` — Streamlit app
 - `model.pkl` — saved trained model
 - `requirements.txt` — Python dependencies
+- `eda.py` — exploratory analysis script
+- `train_model.py` — model training script
+- `importdata.py` — Kaggle dataset download helper
+- `check.py` — quick dataset inspection script
 
+## Notes
+
+- Raw CSV files, generated charts, and trained model artifacts are ignored by Git.
+- Run `python3 train_model.py` after downloading the Kaggle dataset to regenerate model files.
