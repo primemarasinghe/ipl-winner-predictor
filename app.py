@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 st.set_page_config(
-    page_title="IPL WInning Predictor",
+    page_title="IPL Winning Predictor",
     page_icon="🏏",
     layout="wide",
 )
@@ -84,6 +84,14 @@ html, body, [class*="css"] {
     font-weight: 700;
     line-height: 1.05;
     margin: 0;
+}
+
+.hero-about {
+    max-width: 58ch;
+    margin: 0.55rem 0 0;
+    color: rgba(255,255,255,0.72);
+    font-size: 15px;
+    line-height: 1.45;
 }
 
 .hero-brand-row {
@@ -177,16 +185,34 @@ html, body, [class*="css"] {
     box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
 }
 
-.predict-btn-wrap button {
+.stButton > button {
+    position: relative;
+    overflow: hidden;
     width: 100% !important;
-    background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%) !important;
-    color: white !important;
-    border-radius: 14px !important;
-    font-size: 16px !important;
-    font-weight: 600 !important;
-    padding: 0.75rem !important;
-    border: none !important;
-    box-shadow: 0 12px 26px rgba(29, 78, 216, 0.25);
+    min-height: 58px;
+    background:
+        linear-gradient(120deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.20) 18%, rgba(255,255,255,0.00) 36%),
+        linear-gradient(135deg, #f59e0b 0%, #22c55e 46%, #1d4ed8 100%) !important;
+    background-size: 240% 100%, 100% 100% !important;
+    color: #ffffff !important;
+    border-radius: 18px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    padding: 0.95rem 1.25rem !important;
+    border: 1px solid rgba(255,255,255,0.18) !important;
+    box-shadow: 0 18px 42px rgba(29, 78, 216, 0.30), 0 0 0 1px rgba(255,255,255,0.05) inset;
+    animation: buttonShimmer 3s ease-in-out infinite, buttonPulse 2.8s ease-in-out infinite;
+    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+.stButton > button:hover {
+    transform: translateY(-3px) scale(1.01);
+    filter: brightness(1.08);
+    box-shadow: 0 24px 56px rgba(34, 197, 94, 0.36), 0 0 0 1px rgba(255,255,255,0.10) inset;
+}
+
+.stButton > button:active {
+    transform: translateY(0) scale(0.99);
 }
 
 .result-card {
