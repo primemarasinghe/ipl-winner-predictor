@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 st.set_page_config(
-    page_title="IPL Winner Predictor",
+    page_title="IPL Winner Predictors",
     page_icon="🏏",
     layout="wide",
 )
