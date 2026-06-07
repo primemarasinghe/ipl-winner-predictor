@@ -409,7 +409,7 @@ html, body, [class*="css"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1 1 0;
+    flex: 0 1 330px;
     min-width: 0;
     gap: 18px;
     min-height: 198px;
@@ -560,19 +560,19 @@ st.markdown(
     </div>
     <div class="hero-scoreline">
         <div class="hero-score-card">
-            <div class="logo-wrap">{team_logo_html("Chennai Super Kings", 170)}</div>
-            <div class="hero-score-meta">
+            <div class="hero-score-meta" style="text-align:right;">
                 <div class="hero-score-title">Featured team</div>
                 <div class="hero-score-team">Chennai Super Kings</div>
             </div>
+            <div class="logo-wrap">{team_logo_html("Chennai Super Kings", 170)}</div>
         </div>
         <div class="hero-vs-pill">VS</div>
         <div class="hero-score-card right">
-            <div class="hero-score-meta" style="text-align:right;">
+            <div class="logo-wrap">{team_logo_html("Mumbai Indians", 170)}</div>
+            <div class="hero-score-meta">
                 <div class="hero-score-title">Featured team</div>
                 <div class="hero-score-team">Mumbai Indians</div>
             </div>
-            <div class="logo-wrap">{team_logo_html("Mumbai Indians", 170)}</div>
         </div>
     </div>
     <div class="hero-meta">
