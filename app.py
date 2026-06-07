@@ -132,9 +132,14 @@ html, body, [class*="css"] {
 .hero-brand-row {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 18px;
     margin-bottom: 1rem;
     flex-wrap: wrap;
+}
+
+.hero-copy {
+    flex: 1;
+    min-width: 260px;
 }
 
 .ipl-logo-shell {
@@ -443,6 +448,16 @@ html, body, [class*="css"] {
     font-weight: 700;
     letter-spacing: 0.08em;
 }
+
+@media (max-width: 640px) {
+    .hero-brand-row {
+        align-items: flex-start;
+    }
+
+    .hero-copy {
+        min-width: 100%;
+    }
+}
 </style>
 """,
     unsafe_allow_html=True,
@@ -494,9 +509,11 @@ st.markdown(
         <div class="ipl-logo-shell">
             <img src="{IPL_LOGO_URL}" alt="IPL logo" />
         </div>
+        <div class="hero-copy">
+            <div class="hero-title">Modern cricket prediction UI.</div>
+            <p class="hero-subtitle">Pick the teams, venue, toss and decision, then get a clean winner forecast with match context and form cues.</p>
+        </div>
     </div>
-    <div class="hero-title">Modern cricket prediction UI.</div>
-    <p class="hero-subtitle">Pick the teams, venue, toss and decision, then get a clean winner forecast with match context and form cues.</p>
     <div class="hero-scoreline">
         <div class="hero-score-card">
             <div class="logo-wrap">{team_logo_html("Chennai Super Kings", 84)}</div>
