@@ -398,16 +398,19 @@ html, body, [class*="css"] {
 }
 
 .hero-scoreline {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    align-items: center;
-    gap: 18px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
     margin-top: 1.2rem;
 }
 
 .hero-score-card {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+    min-width: 0;
     gap: 18px;
     min-height: 198px;
     padding: 1.1rem 1.25rem;
@@ -425,7 +428,7 @@ html, body, [class*="css"] {
 }
 
 .hero-score-card.right {
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .hero-score-meta {
@@ -450,6 +453,8 @@ html, body, [class*="css"] {
 }
 
 .hero-vs-pill {
+    align-self: center;
+    flex: 0 0 auto;
     padding: 0.85rem 0.95rem;
     border-radius: 999px;
     background: rgba(255,255,255,0.12);
@@ -469,13 +474,13 @@ html, body, [class*="css"] {
     }
 
     .hero-scoreline {
-        gap: 8px;
+        gap: 6px;
     }
 
     .hero-score-card {
         min-height: 126px;
-        gap: 8px;
-        padding: 0.75rem;
+        gap: 6px;
+        padding: 0.6rem;
     }
 
     .hero-score-card .team-logo {
