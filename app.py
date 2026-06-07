@@ -399,42 +399,33 @@ html, body, [class*="css"] {
 
 .hero-scoreline {
     display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 1.2rem;
-}
-
-.hero-score-card {
-    display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 1 330px;
-    min-width: 0;
     gap: 18px;
-    min-height: 198px;
+    flex-wrap: nowrap;
+    margin: 1.2rem auto 0;
+    max-width: 720px;
     padding: 1.1rem 1.25rem;
-    border-radius: 22px;
+    border-radius: 24px;
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.10);
 }
 
-.hero-score-card .team-logo {
+.hero-featured-team {
     flex: 0 0 auto;
-    width: 170px !important;
-    height: 170px !important;
-    margin: 0;
-    padding: 14px;
-}
-
-.hero-score-card.right {
-    justify-content: center;
-}
-
-.hero-score-meta {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    align-items: center;
+    gap: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.hero-featured-team .team-logo {
+    width: 190px !important;
+    height: 190px !important;
+    margin: 0;
+    padding: 14px;
 }
 
 .hero-score-title {
@@ -474,18 +465,19 @@ html, body, [class*="css"] {
     }
 
     .hero-scoreline {
-        gap: 6px;
+        gap: 8px;
+        padding: 0.75rem;
+        max-width: 100%;
     }
 
-    .hero-score-card {
-        min-height: 126px;
-        gap: 6px;
-        padding: 0.6rem;
+    .hero-featured-team {
+        width: 128px;
+        gap: 8px;
     }
 
-    .hero-score-card .team-logo {
-        width: 92px !important;
-        height: 92px !important;
+    .hero-featured-team .team-logo {
+        width: 108px !important;
+        height: 108px !important;
         padding: 8px;
     }
 
@@ -559,17 +551,17 @@ st.markdown(
         </div>
     </div>
     <div class="hero-scoreline">
-        <div class="hero-score-card">
-            <div class="hero-score-meta" style="text-align:right;">
+        <div class="hero-featured-team">
+            <div class="logo-wrap">{team_logo_html("Chennai Super Kings", 170)}</div>
+            <div>
                 <div class="hero-score-title">Featured team</div>
                 <div class="hero-score-team">Chennai Super Kings</div>
             </div>
-            <div class="logo-wrap">{team_logo_html("Chennai Super Kings", 170)}</div>
         </div>
         <div class="hero-vs-pill">VS</div>
-        <div class="hero-score-card right">
+        <div class="hero-featured-team">
             <div class="logo-wrap">{team_logo_html("Mumbai Indians", 170)}</div>
-            <div class="hero-score-meta">
+            <div>
                 <div class="hero-score-title">Featured team</div>
                 <div class="hero-score-team">Mumbai Indians</div>
             </div>
