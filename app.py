@@ -399,20 +399,29 @@ html, body, [class*="css"] {
 
 .hero-scoreline {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     align-items: center;
-    gap: 14px;
-    margin-top: 1rem;
+    gap: 18px;
+    margin-top: 1.2rem;
 }
 
 .hero-score-card {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 0.85rem 0.95rem;
-    border-radius: 18px;
+    gap: 18px;
+    min-height: 198px;
+    padding: 1.1rem 1.25rem;
+    border-radius: 22px;
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.10);
+}
+
+.hero-score-card .team-logo {
+    flex: 0 0 auto;
+    width: 170px !important;
+    height: 170px !important;
+    margin: 0;
+    padding: 14px;
 }
 
 .hero-score-card.right {
@@ -434,17 +443,18 @@ html, body, [class*="css"] {
 }
 
 .hero-score-team {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 700;
     color: #fff;
+    line-height: 1.1;
 }
 
 .hero-vs-pill {
-    padding: 0.55rem 0.75rem;
+    padding: 0.85rem 0.95rem;
     border-radius: 999px;
     background: rgba(255,255,255,0.12);
     color: rgba(255,255,255,0.86);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.08em;
 }
@@ -456,6 +466,35 @@ html, body, [class*="css"] {
 
     .hero-copy {
         min-width: 100%;
+    }
+
+    .hero-scoreline {
+        gap: 8px;
+    }
+
+    .hero-score-card {
+        min-height: 126px;
+        gap: 8px;
+        padding: 0.75rem;
+    }
+
+    .hero-score-card .team-logo {
+        width: 92px !important;
+        height: 92px !important;
+        padding: 8px;
+    }
+
+    .hero-score-team {
+        font-size: 13px;
+    }
+
+    .hero-score-title {
+        font-size: 9px;
+    }
+
+    .hero-vs-pill {
+        padding: 0.55rem 0.55rem;
+        font-size: 11px;
     }
 }
 </style>
@@ -516,7 +555,7 @@ st.markdown(
     </div>
     <div class="hero-scoreline">
         <div class="hero-score-card">
-            <div class="logo-wrap">{team_logo_html("Chennai Super Kings", 84)}</div>
+            <div class="logo-wrap">{team_logo_html("Chennai Super Kings", 170)}</div>
             <div class="hero-score-meta">
                 <div class="hero-score-title">Featured team</div>
                 <div class="hero-score-team">Chennai Super Kings</div>
@@ -528,7 +567,7 @@ st.markdown(
                 <div class="hero-score-title">Featured team</div>
                 <div class="hero-score-team">Mumbai Indians</div>
             </div>
-            <div class="logo-wrap">{team_logo_html("Mumbai Indians", 84)}</div>
+            <div class="logo-wrap">{team_logo_html("Mumbai Indians", 170)}</div>
         </div>
     </div>
     <div class="hero-meta">
