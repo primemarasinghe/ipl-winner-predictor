@@ -1,3 +1,7 @@
+st.markdown("""
+<meta http-equiv="Content-Security-Policy" content="img-src * data: blob:;">
+""", unsafe_allow_html=True)
+
 import streamlit as st
 import joblib
 import numpy as np
