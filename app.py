@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 st.set_page_config(
-    page_title="IPL Winner Predictors",
+    page_title="IPL WInning Predictor",
     page_icon="🏏",
     layout="wide",
 )
@@ -79,67 +79,23 @@ html, body, [class*="css"] {
     pointer-events: none;
 }
 
-.hero-topline {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 0.75rem;
-}
-
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 0.35rem 0.7rem;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.08);
-    color: rgba(255,255,255,0.92);
-    font-size: 12px;
-    font-weight: 600;
-    border: 1px solid rgba(255,255,255,0.08);
-}
-
 .hero-title {
-    font-size: 34px;
+    font-size: 44px;
     font-weight: 700;
     line-height: 1.05;
     margin: 0;
 }
 
-.hero-subtitle {
-    font-size: 14px;
-    color: rgba(255,255,255,0.72);
-    margin: 0.45rem 0 0;
-    max-width: 62ch;
-}
-
-.hero-meta {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-}
-
-.hero-chip {
-    padding: 0.5rem 0.8rem;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.08);
-    color: rgba(255,255,255,0.82);
-    font-size: 12px;
-    border: 1px solid rgba(255,255,255,0.08);
-}
-
 .hero-brand-row {
     display: flex;
     align-items: center;
-    gap: 18px;
-    margin-bottom: 1rem;
+    justify-content: center;
+    gap: 22px;
     flex-wrap: wrap;
 }
 
 .hero-copy {
-    flex: 1;
-    min-width: 260px;
+    min-width: 0;
 }
 
 .ipl-logo-shell {
@@ -397,100 +353,18 @@ html, body, [class*="css"] {
     margin: 8px auto 0;
 }
 
-.hero-scoreline {
-    display: grid;
-    grid-template-columns: minmax(180px, 260px) auto minmax(180px, 260px);
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    column-gap: 18px;
-    margin: 1.2rem auto 0;
-    max-width: 760px;
-    padding: 1.1rem 1.25rem;
-    border-radius: 24px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.10);
-}
-
-.hero-featured-team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 250px;
-    text-align: center;
-}
-
-.hero-featured-team .team-logo {
-    width: 190px !important;
-    height: 190px !important;
-    margin: 0;
-    padding: 14px;
-}
-
-.hero-score-title {
-    font-size: 11px;
-    color: rgba(255,255,255,0.65);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 700;
-}
-
-.hero-score-team {
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.1;
-}
-
-.hero-vs-pill {
-    padding: 0.85rem 0.95rem;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.12);
-    color: rgba(255,255,255,0.86);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-}
-
 @media (max-width: 640px) {
     .hero-brand-row {
-        align-items: flex-start;
+        flex-direction: column;
+        text-align: center;
     }
 
     .hero-copy {
         min-width: 100%;
     }
 
-    .hero-scoreline {
-        grid-template-columns: minmax(104px, 1fr) auto minmax(104px, 1fr);
-        column-gap: 6px;
-        padding: 0.75rem;
-        max-width: 100%;
-    }
-
-    .hero-featured-team {
-        width: 128px;
-        gap: 8px;
-    }
-
-    .hero-featured-team .team-logo {
-        width: 108px !important;
-        height: 108px !important;
-        padding: 8px;
-    }
-
-    .hero-score-team {
-        font-size: 13px;
-    }
-
-    .hero-score-title {
-        font-size: 9px;
-    }
-
-    .hero-vs-pill {
-        padding: 0.55rem 0.55rem;
-        font-size: 11px;
+    .hero-title {
+        font-size: 34px;
     }
 }
 </style>
@@ -536,40 +410,13 @@ def team_logo_html(team, size=96):
 st.markdown(
     f"""
 <div class="hero-card">
-    <div class="hero-topline">
-        <div class="hero-badge">🏏 IPL Winner Predictor</div>
-        <div class="hero-badge">Random Forest</div>
-    </div>
     <div class="hero-brand-row">
         <div class="ipl-logo-shell">
             <img src="{IPL_LOGO_URL}" alt="IPL logo" />
         </div>
         <div class="hero-copy">
-            <div class="hero-title">Modern cricket prediction UI.</div>
-            <p class="hero-subtitle">Pick the teams, venue, toss and decision, then get a clean winner forecast with match context and form cues.</p>
+            <div class="hero-title">IPL WInning Predictor</div>
         </div>
-    </div>
-    <div class="hero-scoreline">
-        <div class="hero-featured-team">
-            <div class="logo-wrap">{team_logo_html("Chennai Super Kings", 170)}</div>
-            <div>
-                <div class="hero-score-title">Featured team</div>
-                <div class="hero-score-team">Chennai Super Kings</div>
-            </div>
-        </div>
-        <div class="hero-vs-pill">VS</div>
-        <div class="hero-featured-team">
-            <div class="logo-wrap">{team_logo_html("Mumbai Indians", 170)}</div>
-            <div>
-                <div class="hero-score-title">Featured team</div>
-                <div class="hero-score-team">Mumbai Indians</div>
-            </div>
-        </div>
-    </div>
-    <div class="hero-meta">
-        <div class="hero-chip">2008–2020 dataset</div>
-        <div class="hero-chip">Pre-match features only</div>
-        <div class="hero-chip">Team + venue context</div>
     </div>
 </div>
 """,
