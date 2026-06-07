@@ -398,13 +398,14 @@ html, body, [class*="css"] {
 }
 
 .hero-scoreline {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(180px, 260px) auto minmax(180px, 260px);
     align-items: center;
     justify-content: center;
-    gap: 18px;
-    flex-wrap: nowrap;
+    justify-items: center;
+    column-gap: 18px;
     margin: 1.2rem auto 0;
-    max-width: 720px;
+    max-width: 760px;
     padding: 1.1rem 1.25rem;
     border-radius: 24px;
     background: rgba(255,255,255,0.06);
@@ -412,7 +413,6 @@ html, body, [class*="css"] {
 }
 
 .hero-featured-team {
-    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -444,8 +444,6 @@ html, body, [class*="css"] {
 }
 
 .hero-vs-pill {
-    align-self: center;
-    flex: 0 0 auto;
     padding: 0.85rem 0.95rem;
     border-radius: 999px;
     background: rgba(255,255,255,0.12);
@@ -465,7 +463,8 @@ html, body, [class*="css"] {
     }
 
     .hero-scoreline {
-        gap: 8px;
+        grid-template-columns: minmax(104px, 1fr) auto minmax(104px, 1fr);
+        column-gap: 6px;
         padding: 0.75rem;
         max-width: 100%;
     }
