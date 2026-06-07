@@ -1,6 +1,4 @@
-st.markdown("""
-<meta http-equiv="Content-Security-Policy" content="img-src * data: blob:;">
-""", unsafe_allow_html=True)
+
 
 import streamlit as st
 import joblib
@@ -12,7 +10,9 @@ st.set_page_config(
     page_icon="🏏",
     layout="wide",
 )
-
+st.markdown("""
+<meta http-equiv="Content-Security-Policy" content="img-src * data: blob:;">
+""", unsafe_allow_html=True)
 TEAM_CONFIG = {
     "Chennai Super Kings":         {"abbr": "CSK",  "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Chennai_Super_Kings_Logo.svg/1280px-Chennai_Super_Kings_Logo.svg.png",  "accent": "#f59e0b"},
     "Delhi Capitals":              {"abbr": "DC",   "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Delhi_Capitals.svg/1280px-Delhi_Capitals.svg.png",                     "accent": "#2563eb"},
